@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    printf("\n\n\t\t\tO ANDARILHO\n");
+    int troca;
+    printf("\nDe quantas maneiras os passos serao reverzados [D/E]? ");
+    scanf("%i", &troca);
+
+    int cont = 0;
+    int i = 0;
+    int j[i];
+    int num = 0;
+    int maior = 0;
+
+    for (; i < troca + 1; i++)
+    {
+        printf("\nQuantidade de passos: ");
+        scanf("\n%i", &j[i]);
+        cont++;
+
+        if (i % 2 == 0)
+        {
+            if (num == 0)
+            {
+                num = j[i];
+            }
+            else
+            {
+                num = num + j[i];
+            }
+        }
+        else
+        {
+            num = num - j[i];
+        }
+        if (num > maior)
+            maior = num;
+    }
+    printf("\n\nA maior distancia percorrida por Joaozinho foi de %i", maior);
+    printf(" passos.");
+
+    return 0;
+}
